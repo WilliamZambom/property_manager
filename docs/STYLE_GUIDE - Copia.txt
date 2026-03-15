@@ -1,0 +1,49 @@
+# STYLE_GUIDE
+
+## Posicionamento da Marca
+
+Proximidade, simplicidade e profissionalismo autônomo.
+
+## Público-Alvo
+
+Classe média interessada na compra de imóveis em Vila Velha.
+
+## Identidade Visual
+
+### Cores
+
+- Preto (principal)
+- Branco (base)
+- Cinza claro (apoio)
+
+### Tipografia
+
+Fonte sans-serif moderna:
+
+- Inter
+- Poppins
+- Montserrat
+
+## Estilo Visual
+
+- Minimalista
+- Layout limpo
+- Espaçamento amplo
+- Cards com sombra leve
+- Hover discreto
+- Foco em clareza e legibilidade
+
+## Logo
+
+- Deve conter símbolo
+- Nome: Weliton Alves
+- Exibir número CRECI
+- Elementos visuais sugeridos: prédios discretos
+
+## Tom de Comunicação
+
+- Direto
+- Claro
+- Seguro
+- Comercial profissional
+- Ênfase na experiência jurídica como diferencial competitivo

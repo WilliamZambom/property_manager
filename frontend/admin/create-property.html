@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastrar imóvel</title>
+
+    <link rel="stylesheet" href="../css/admin.css" />
+    <link rel="stylesheet" href="../css/create-property.css" />
+  </head>
+
+  <body class="create-property-page">
+    <main class="create-property-container">
+      <section class="create-property-header">
+        <div>
+          <h1>Cadastrar imóvel</h1>
+          <p>Adicione um novo imóvel ao sistema</p>
+        </div>
+
+        <a href="./dashboard.html" class="btn btn-secondary">
+          Voltar ao dashboard
+        </a>
+      </section>
+
+      <section class="create-property-card">
+        <p id="success-message" class="hidden success-message"></p>
+        <p id="error-message" class="hidden error-message"></p>
+
+        <form id="create-property-form" class="create-property-form">
+          <div class="form-group">
+            <label for="title">Título</label>
+            <input type="text" id="title" name="title" required />
+          </div>
+
+          <div class="form-group">
+            <label for="description">Descrição</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="price">Preço</label>
+            <input type="number" id="price" name="price" required />
+          </div>
+
+          <div class="form-group">
+            <label for="city">Cidade</label>
+            <input type="text" id="city" name="city" required />
+          </div>
+
+          <div class="form-group">
+            <label for="state">Estado</label>
+            <input type="text" id="state" name="state" value="ES" required />
+          </div>
+
+          <div class="form-group">
+            <label for="neighborhood">Bairro</label>
+            <input type="text" id="neighborhood" name="neighborhood" />
+          </div>
+
+          <div class="form-group">
+            <label for="address">Endereço</label>
+            <input type="text" id="address" name="address" />
+          </div>
+
+          <div class="form-group">
+            <label for="images">Imagens</label>
+            <input
+              type="file"
+              id="images"
+              name="images"
+              multiple
+              accept="image/*"
+            />
+          </div>
+
+          <div class="create-property-actions">
+            <button type="submit">Cadastrar imóvel</button>
+            <a href="./dashboard.html" class="btn btn-secondary">Cancelar</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/create-property.js"></script>
+  </body>
+</html>

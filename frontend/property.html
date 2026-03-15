@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes do Imóvel</title>
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/property.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="./index.html" class="back-link">← Voltar para imóveis</a>
+      </div>
+    </header>
+
+    <main class="container property-page">
+      <p id="loading">Carregando imóvel...</p>
+      <p id="error-message" class="hidden"></p>
+
+      <section id="property-details" class="hidden">
+        <div class="gallery">
+          <img
+            id="main-image"
+            src="./assets/placeholder.jpg"
+            alt="Imagem do imóvel"
+            class="main-image"
+          />
+          <div id="thumbnail-list" class="thumbnail-list"></div>
+        </div>
+
+        <div class="property-info">
+          <h1 id="property-title"></h1>
+          <p id="property-price" class="price"></p>
+          <p id="property-location" class="location"></p>
+          <p id="property-address" class="address"></p>
+
+          <section class="description-box">
+            <h2>Descrição</h2>
+            <p id="property-description"></p>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/config.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/property.js"></script>
+  </body>
+</html>

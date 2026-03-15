@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar imóvel</title>
+
+    <link rel="stylesheet" href="../css/admin.css" />
+    <link rel="stylesheet" href="../css/edit-property.css" />
+  </head>
+
+  <body class="edit-property-page">
+    <main class="edit-property-container">
+      <section class="edit-property-header">
+        <div>
+          <h1>Editar imóvel</h1>
+          <p>Atualize os dados do imóvel cadastrado</p>
+        </div>
+
+        <a href="./dashboard.html" class="btn btn-secondary">
+          Voltar ao dashboard
+        </a>
+      </section>
+
+      <section class="edit-property-card">
+        <p id="loading-message">Carregando imóvel...</p>
+        <p id="error-message" class="hidden"></p>
+
+        <form id="edit-property-form" class="edit-property-form hidden">
+          <div class="form-group">
+            <label for="title">Título</label>
+            <input type="text" id="title" name="title" required />
+          </div>
+
+          <div class="form-group">
+            <label for="description">Descrição</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="price">Preço</label>
+            <input type="number" id="price" name="price" required />
+          </div>
+
+          <div class="form-group">
+            <label for="city">Cidade</label>
+            <input type="text" id="city" name="city" required />
+          </div>
+
+          <div class="form-group">
+            <label for="state">Estado</label>
+            <input type="text" id="state" name="state" required />
+          </div>
+
+          <div class="form-group">
+            <label for="neighborhood">Bairro</label>
+            <input type="text" id="neighborhood" name="neighborhood" />
+          </div>
+
+          <div class="form-group">
+            <label for="address">Endereço</label>
+            <input type="text" id="address" name="address" />
+          </div>
+
+          <div class="form-group">
+            <label for="images">Adicionar novas imagens</label>
+            <input
+              type="file"
+              id="images"
+              name="images"
+              multiple
+              accept="image/*"
+            />
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label>
+              <input
+                type="checkbox"
+                id="replaceMainImage"
+                name="replaceMainImage"
+                value="true"
+              />
+              Definir nova imagem enviada como principal
+            </label>
+          </div>
+
+          <section class="current-images-section">
+            <div class="current-images-header">
+              <h2>Imagens atuais</h2>
+              <p>Você pode remover imagens individualmente abaixo.</p>
+            </div>
+
+            <div id="current-images-list" class="current-images-grid">
+              <!-- As imagens atuais serão inseridas aqui pelo edit-property.js -->
+            </div>
+          </section>
+
+          <div class="edit-property-actions">
+            <button type="submit">Salvar alterações</button>
+            <a href="./dashboard.html" class="btn btn-secondary">Cancelar</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="../js/config.js"></script>
+    <script src="../js/edit-property.js"></script>
+  </body>
+</html>

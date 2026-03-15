@@ -1,0 +1,7 @@
+Atualizações 11/03
+
+Oque falta no backend:
+
+- permitir múltiplas imagens por imóvel
+- upload direto no cadastro do imóvel (sem precisar fazer duas chamadas)
+- remover imagem do Cloudinary ao deletar imóvel (opcional)

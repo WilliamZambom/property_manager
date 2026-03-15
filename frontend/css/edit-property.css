@@ -1,0 +1,172 @@
+.edit-property-page {
+  min-height: 100vh;
+  background: #f3f4f6;
+  padding: 32px;
+}
+
+.edit-property-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.edit-property-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.edit-property-header h1 {
+  margin-bottom: 6px;
+}
+
+.edit-property-header p {
+  color: #555;
+}
+
+.edit-property-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.edit-property-form {
+  display: grid;
+  gap: 16px;
+}
+
+.edit-property-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.edit-property-form .form-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.edit-property-form .form-group input,
+.edit-property-form .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: white;
+}
+
+.edit-property-form .form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.edit-property-form .checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit-property-form .checkbox-group input {
+  width: auto;
+  height: auto;
+}
+
+.current-images-section {
+  margin-top: 8px;
+}
+
+.current-images-section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.current-images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.current-image-card {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.current-image-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.current-image-card p {
+  font-size: 0.9rem;
+  color: #444;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.current-image-card button {
+  width: 100%;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  background: #ef4444;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.current-image-card button:hover {
+  background: #dc2626;
+}
+
+.edit-property-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.edit-property-actions .btn,
+.edit-property-actions button {
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-property-actions button {
+  background: #111;
+  color: white;
+}
+
+.edit-property-actions .btn-secondary {
+  background: white;
+  color: #111;
+  border: 1px solid #d1d5db;
+}
+
+@media (max-width: 768px) {
+  .edit-property-page {
+    padding: 24px 16px;
+  }
+
+  .edit-property-card {
+    padding: 20px;
+  }
+
+  .current-images-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}
