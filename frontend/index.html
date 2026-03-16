@@ -3,30 +3,120 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Imóveis</title>
+    <title>Weliton Alves Imóveis</title>
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/home.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="hero">
       <div class="container">
-        <a href="/frontend/admin/login.html" class="btn-login">Login</a>
-        <h1>Imóveis em Vila Velha</h1>
-        <p>Encontre oportunidades selecionadas</p>
+        <div class="hero-topbar">
+          <a href="./index.html" class="brand" aria-label="Página inicial">
+            <div class="brand__logo-box">
+              <!-- <img src="./assets/logo.png" alt="Logo Weliton Alves Imóveis" class="brand__logo" /> -->
+              <span class="brand__logo-placeholder">WA</span>
+            </div>
+
+            <div class="brand__text">
+              <span class="brand__name">Weliton Alves</span>
+              <span class="brand__sub">Imóveis</span>
+            </div>
+          </a>
+
+          <a href="./admin/login.html" class="btn btn-secondary">Login</a>
+        </div>
+
+        <div class="hero-content">
+          <span class="section-tag">Imobiliário em Vila Velha</span>
+
+          <h1 class="hero-title">
+            Imóveis selecionados com atendimento profissional e seguro
+          </h1>
+
+          <p class="hero-description">
+            Encontre oportunidades em Vila Velha com uma apresentação clara,
+            suporte confiável e atenção aos detalhes da negociação.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#imoveis" class="btn btn-primary">Ver imóveis</a>
+            <a href="./property.html" class="btn btn-secondary">Página de detalhes</a>
+          </div>
+        </div>
       </div>
     </header>
 
-    <main class="container">
-      <section>
-        <div id="properties-container" class="properties-grid"></div>
-        <p id="loading">Carregando imóveis...</p>
-        <p id="error-message" class="hidden"></p>
+    <main class="home-main">
+      <section id="imoveis" class="section properties-section">
+        <div class="container">
+          <div class="section-header properties-header">
+            <div>
+              <span class="section-tag">Portfólio</span>
+              <h2 class="section-title">Imóveis disponíveis</h2>
+              <p class="section-description">
+                Selecione uma opção para visualizar mais detalhes sobre preço,
+                localização, características e contato.
+              </p>
+            </div>
+          </div>
+
+          <p id="loading" class="feedback-message">Carregando imóveis...</p>
+          <p id="error-message" class="feedback-message feedback-error hidden"></p>
+
+          <div id="properties-container" class="properties-grid"></div>
+        </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <h3 class="footer-title">Weliton Alves Imóveis</h3>
+          <p class="footer-text">
+            Atendimento imobiliário com comunicação clara, organização e suporte profissional.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-heading">Contato</h4>
+          <ul class="footer-list">
+            <li>Telefone: (00) 00000-0000</li>
+            <li>E-mail: contato@exemplo.com</li>
+            <li>WhatsApp: (00) 00000-0000</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-heading">Informações profissionais</h4>
+          <ul class="footer-list">
+            <li>CRECI: inserir número</li>
+            <li>Área de atuação: Vila Velha e região</li>
+            <li>Horário de atendimento: inserir</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-heading">Endereço e redes</h4>
+          <ul class="footer-list">
+            <li>Endereço comercial: inserir</li>
+            <li>Instagram: @inserir</li>
+            <li>Facebook / LinkedIn: inserir</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom__content">
+          <p>© 2026 Weliton Alves Imóveis. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
 
     <script src="./js/config.js"></script>
     <script src="./js/api.js"></script>

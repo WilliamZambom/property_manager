@@ -1,34 +1,30 @@
-/* ========= FONTS ========= */
-/* Preferível importar via <link> no HTML, mas deixo aqui como referência */
-/* 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap');
-*/
-
-/* ========= ROOT TOKENS ========= */
+/* ========= ROOT  ========= */
 :root {
-  /* Brand */
-  --color-primary: #0B0B0C;
-  --color-primary-soft: #121315;
-  --color-surface: #17191C;
-  --color-surface-2: #1D2025;
+  /* Brand / Base */
+  --color-primary: #ffffff;
+  --color-primary-soft: #fafaf8;
+  --color-surface: #ffffff;
+  --color-surface-2: #f5f5f2;
 
-  --color-text: #F5F7FA;
-  --color-text-soft: #D9DEE7;
-  --color-text-muted: #A6ADB8;
+  --color-text: #111111;
+  --color-text-soft: #1f2937;
+  --color-text-muted: #6b7280;
 
-  --color-border: #2A2E35;
-  --color-border-strong: #3A404A;
+  --color-border: #e5e7eb;
+  --color-border-strong: #d1d5db;
 
-  --color-accent: #C9A14A;
-  --color-accent-hover: #E0B45A;
-  --color-accent-soft: rgba(201, 161, 74, 0.12);
+  /* Accent */
+  --color-accent: #8c6a2b;
+  --color-accent-hover: #735520;
+  --color-accent-soft: rgba(140, 106, 43, 0.1);
 
-  --color-success: #2E9E6F;
-  --color-danger: #D9534F;
-  --color-warning: #D4A63D;
-  --color-info: #4A90E2;
+  /* Feedback */
+  --color-success: #1f8f5f;
+  --color-danger: #c24141;
+  --color-warning: #b7791f;
+  --color-info: #2563eb;
 
-  --color-white: #FFFFFF;
+  --color-white: #ffffff;
   --color-black: #000000;
 
   /* Typography */
@@ -77,9 +73,9 @@
   --radius-pill: 999px;
 
   /* Shadow */
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.18);
-  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.22);
-  --shadow-lg: 0 18px 40px rgba(0, 0, 0, 0.28);
+  --shadow-sm: 0 6px 18px rgba(17, 17, 17, 0.08);
+  --shadow-md: 0 14px 34px rgba(17, 17, 17, 0.12);
+  --shadow-lg: 0 24px 48px rgba(17, 17, 17, 0.16);
 
   /* Layout */
   --container-width: 1200px;
