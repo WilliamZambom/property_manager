@@ -83,8 +83,6 @@ README.md
 
 - Sistema exclusivo para venda (sem aluguel)
 - Apenas imóveis ativos aparecem na landing
-- Exclusão lógica (soft delete)
-
 ---
 
 ## Objetivo do Projeto
