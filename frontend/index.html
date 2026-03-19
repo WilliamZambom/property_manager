@@ -19,7 +19,7 @@
         <div class="hero-topbar">
           <a href="./index.html" class="brand" aria-label="Página inicial">
             <div class="brand__logo-box">
-              <span class="brand__logo-placeholder">WA</span>
+              <img src="./assets/logoWA.png" alt="Logo">
             </div>
 
             <div class="brand__text">
@@ -53,65 +53,156 @@
     </header>
 
     <main class="home-main">
-  <section
-    id="institutional-content"
-    class="section institutional-section"
-    aria-labelledby="institucional-title"
-  >
-    <div class="container institutional-grid">
-      <div class="institutional-content">
-        <span class="section-tag">Institucional</span>
-        <h2 id="institucional-title" class="section-title">
-          Atendimento conectado à região de Vila Velha
-        </h2>
+      <section id="imoveis" class="section properties-section">
+        <div class="container">
+          <div class="section-header properties-header">
+            <div>
+              <span class="section-tag">Portfólio</span>
+              <h2 class="section-title">Imóveis disponíveis</h2>
+              <p class="section-description">
+                Selecione uma opção para visualizar mais detalhes sobre localização, características e contato.
+              </p>
+            </div>
+          </div>
 
-        <div class="institutional-card">
-          <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam quaerat omnis aliquam assumenda explicabo fugit laboriosam minima reiciendis tenetur beatae distinctio sit, optio eos animi nobis fugiat dicta architecto suscipit.
-          </p>
+          <p id="loading" class="feedback-message">Carregando imóveis...</p>
+          <p id="error-message" class="feedback-message feedback-error hidden"></p>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, officia praesentium corporis facere porro ipsum. Molestiae sapiente illo voluptatem dicta quia, nesciunt pariatur alias dolorem nisi, sunt est, delectus sit.
-          </p>
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi a debitis blanditiis repellendus id! Voluptatibus illo inventore atque! Laudantium perferendis inventore ipsa ab necessitatibus? Cum officiis dolorem vero enim at!
-          </p>
+          <div id="properties-container" class="properties-grid"></div>
         </div>
-      </div>
+      </section>
 
-      <div class="institutional-media">
-        <div class="institutional-image-wrapper">
-          <img
-            src="assets/convento_da_penha.png"
-            alt="Vista do Convento da Penha em Vila Velha"
-            class="institutional-image"
-          />
+      <section
+        id="institutional-content"
+        class="section institutional-section"
+        aria-labelledby="institucional-title"
+      >
+        <div class="container institutional-grid">
+          <div class="institutional-content">
+            <span class="section-tag">Institucional</span>
+            <h2 id="institucional-title" class="section-title">
+              Quem somos
+            </h2>
+
+            <div class="institutional-card">
+              <p>
+                Texto a ser preenchido...
+              </p>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, officia praesentium corporis facere porro ipsum. Molestiae sapiente illo voluptatem dicta quia, nesciunt pariatur alias dolorem nisi, sunt est, delectus sit.
+              </p>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi a debitis blanditiis repellendus id! Voluptatibus illo inventore atque! Laudantium perferendis inventore ipsa ab necessitatibus? Cum officiis dolorem vero enim at!
+              </p>
+            </div>
+          </div>
+
+          <div class="institutional-media">
+            <div class="institutional-image-wrapper">
+              <img
+                src="assets/convento_da_penha.png"
+                alt="Vista do Convento da Penha em Vila Velha"
+                class="institutional-image"
+              />
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section id="imoveis" class="section properties-section">
-    <div class="container">
-      <div class="section-header properties-header">
-        <div>
-          <span class="section-tag">Portfólio</span>
-          <h2 class="section-title">Imóveis disponíveis</h2>
-          <p class="section-description">
-            Selecione uma opção para visualizar mais detalhes sobre preço,
-            localização, características e contato.
-          </p>
+      <section
+        id="services"
+        class="section services-section"
+        aria-labelledby="services-title"
+      >
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <span class="section-tag">Serviços</span>
+              <h2 id="services-title" class="section-title">
+                Como posso ajudar
+              </h2>
+              <p class="section-description">
+                Soluções imobiliárias com atendimento próximo, organização e
+                suporte durante todas as etapas da negociação.
+              </p>
+            </div>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <h3 class="service-card__title">Compra de imóveis</h3>
+              <p class="service-card__text">
+                Apoio na busca, análise e condução da negociação para encontrar
+                o imóvel adequado ao perfil do cliente.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <h3 class="service-card__title">Venda de imóveis</h3>
+              <p class="service-card__text">
+                Apresentação estratégica do imóvel, organização das informações
+                e suporte comercial para ampliar a segurança da venda.
+              </p>
+            </article>
+
+          </div>
         </div>
-      </div>
+      </section>
 
-      <p id="loading" class="feedback-message">Carregando imóveis...</p>
-      <p id="error-message" class="feedback-message feedback-error hidden"></p>
+      <section
+        id="partners"
+        class="section partners-section"
+        aria-labelledby="partners-title"
+      >
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <span class="section-tag">Parceiros</span>
+              <h2 id="partners-title" class="section-title">
+                Rede de apoio profissional
+              </h2>
+              <p class="section-description">
+                Parcerias estratégicas para oferecer mais segurança, agilidade e
+                suporte complementar nas negociações imobiliárias.
+              </p>
+            </div>
+          </div>
 
-      <div id="properties-container" class="properties-grid"></div>
-    </div>
-  </section>
-</main>
+          <div class="partners-grid">
+            <article class="partner-card">
+              <h3 class="partner-card__title">Parceria 1</h3>
+              <p class="partner-card__text">
+                txt...
+              </p>
+            </article>
+
+            <article class="partner-card">
+              <h3 class="partner-card__title">Parceria 2</h3>
+              <p class="partner-card__text">
+                txt...
+              </p>
+            </article>
+
+            <article class="partner-card">
+              <h3 class="partner-card__title">Parceria 3</h3>
+              <p class="partner-card__text">
+                txt...
+              </p>
+            </article>
+
+            <article class="partner-card">
+              <h3 class="partner-card__title">Parceria 4</h3>
+              <p class="partner-card__text">
+                txt...
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
 
     <footer class="site-footer">
       <div class="container footer-grid">
