@@ -31,22 +31,51 @@ function formatPrice(value) {
   }).format(value);
 }
 
-function createPropertyCard(property) {
+function createPropertyCover(property) {
+  const coverImage = property.images?.[0]?.url;
+
+  if (!coverImage) {
+    return `<div class="card-cover-empty">Sem imagem principal</div>`;
+  }
+
   return `
-      <article class="admin-property-card">
-        <h2>${property.title}</h2>
-        <p><strong>Preço:</strong> ${formatPrice(property.price || 0)}</p>
-        <p><strong>Local:</strong> ${property.neighborhood || ""} - ${property.city || ""}/${property.state || ""}</p>
-        <p><strong>Descrição:</strong> ${property.description || "Sem descrição"}</p>
-  
-        <div class="card-actions">
-          <a href="./edit-property.html?id=${property._id}">Editar</a>
-          <button type="button" class="delete-property" data-id="${property._id}">
-            Excluir
-          </button>
-        </div>
-      </article>
-    `;
+    <a
+      href="${coverImage}"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="card-cover-link"
+      aria-label="Abrir imagem principal de ${property.title}"
+    >
+      <img
+        src="${coverImage}"
+        alt="Imagem principal de ${property.title}"
+        class="card-cover-image"
+      />
+    </a>
+  `;
+}
+
+function createPropertyCard(property) {
+  const location = `${property.neighborhood || ""}${property.neighborhood ? " - " : ""}${property.city || ""}/${property.state || ""}`;
+
+  return `
+    <article class="admin-property-card">
+      <h2>${property.title}</h2>
+
+      ${createPropertyCover(property)}
+
+      <p><strong>Preço:</strong> ${formatPrice(property.price || 0)}</p>
+      <p><strong>Local:</strong> ${location}</p>
+      <p><strong>Descrição:</strong> ${property.description || "Sem descrição"}</p>
+
+      <div class="card-actions">
+        <a href="./edit-property.html?id=${property._id}">Editar</a>
+        <button type="button" class="delete-property" data-id="${property._id}">
+          Excluir
+        </button>
+      </div>
+    </article>
+  `;
 }
 
 async function loadAdminProperties() {
