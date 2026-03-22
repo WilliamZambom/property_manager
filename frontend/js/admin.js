@@ -55,6 +55,15 @@ function createPropertyCover(property) {
   `;
 }
 
+
+function truncateWords(text = "", maxWords = 22) {
+  const words = text.trim().split(/\s+/);
+
+  if (words.length <= maxWords) return text;
+
+  return words.slice(0, maxWords).join(" ") + "...";
+}
+
 function createPropertyCard(property) {
   const location = `${property.neighborhood || ""}${property.neighborhood ? " - " : ""}${property.city || ""}/${property.state || ""}`;
 
@@ -66,7 +75,7 @@ function createPropertyCard(property) {
 
       <p><strong>Preço:</strong> ${formatPrice(property.price || 0)}</p>
       <p><strong>Local:</strong> ${location}</p>
-      <p><strong>Descrição:</strong> ${property.description || "Sem descrição"}</p>
+      <p><strong>Descrição:</strong> ${truncateWords(property.description || "Sem descrição", 22)}</p>
 
       <div class="card-actions">
         <a href="./edit-property.html?id=${property._id}">Editar</a>

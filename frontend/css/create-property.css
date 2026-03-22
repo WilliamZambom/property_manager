@@ -1,0 +1,380 @@
+/* =========================================================
+   PÁGINA
+========================================================= */
+.create-property-page {
+  min-height: 100vh;
+  padding: 32px 16px 48px;
+  background:
+    radial-gradient(circle at top right, rgba(140, 106, 43, 0.08), transparent 24%),
+    radial-gradient(circle at left center, rgba(140, 106, 43, 0.05), transparent 20%),
+    linear-gradient(180deg, #f5f4f1 0%, #ece9e3 100%);
+  color: var(--color-text);
+}
+
+.create-property-container {
+  width: min(100%, 1040px);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+.create-property-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+  padding: 32px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfaf7 100%);
+  border: 1px solid rgba(17, 17, 17, 0.06);
+  border-radius: 28px;
+  box-shadow:
+    0 18px 40px rgba(17, 17, 17, 0.08),
+    0 4px 14px rgba(17, 17, 17, 0.04);
+}
+
+.header-content {
+  max-width: 700px;
+}
+
+.page-eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.create-property-header h1 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  font-weight: var(--fw-extrabold);
+  color: var(--color-text);
+}
+
+.create-property-header p {
+  margin-top: 12px;
+  max-width: 560px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+/* =========================================================
+   BOTÕES E LINKS
+   Todo link de navegação pode usar a classe .btn
+========================================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 22px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: var(--fw-semibold);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: var(--color-white);
+  box-shadow: 0 10px 24px rgba(140, 106, 43, 0.18);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(140, 106, 43, 0.22);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: var(--color-text);
+  border-color: var(--color-border-strong);
+  box-shadow: 0 6px 18px rgba(17, 17, 17, 0.05);
+}
+
+.btn-secondary:hover {
+  border-color: rgba(140, 106, 43, 0.4);
+  color: var(--color-accent);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(17, 17, 17, 0.08);
+}
+
+/* =========================================================
+   CARD PRINCIPAL
+========================================================= */
+.create-property-card {
+  padding: 32px;
+  background: linear-gradient(180deg, #ffffff 0%, #fcfaf6 100%);
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 28px;
+  box-shadow:
+    0 18px 36px rgba(17, 17, 17, 0.08),
+    0 4px 14px rgba(17, 17, 17, 0.04);
+  transition: all 0.2s ease;
+}
+
+.create-property-card:hover {
+  box-shadow:
+    0 22px 42px rgba(17, 17, 17, 0.09),
+    0 6px 16px rgba(17, 17, 17, 0.05);
+}
+
+/* =========================================================
+   MENSAGENS DE FEEDBACK
+========================================================= */
+.success-message,
+.error-message {
+  margin-bottom: 20px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.success-message {
+  background: rgba(31, 143, 95, 0.08);
+  border: 1px solid rgba(31, 143, 95, 0.18);
+  color: var(--color-success);
+}
+
+.error-message {
+  background: rgba(194, 65, 65, 0.08);
+  border: 1px solid rgba(194, 65, 65, 0.18);
+  color: var(--color-danger);
+}
+
+/* =========================================================
+   FORMULÁRIO
+========================================================= */
+.create-property-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Blocos internos */
+.form-section {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(17, 17, 17, 0.05);
+  border-radius: 22px;
+  transition: all 0.2s ease;
+}
+
+.form-section:hover {
+  border-color: rgba(140, 106, 43, 0.18);
+  box-shadow: 0 8px 20px rgba(17, 17, 17, 0.04);
+}
+
+.form-section h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+}
+
+.form-section-text {
+  margin-top: 8px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* Grid dos campos */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group-full {
+  grid-column: 1 / -1;
+}
+
+/* Labels */
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: var(--fw-semibold);
+  line-height: 1.4;
+  color: var(--color-text-soft);
+}
+
+/* Texto auxiliar */
+.field-help {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+/* Campos */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: #ffffff;
+  color: var(--color-text);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-group input {
+  min-height: 56px;
+  padding: 0 18px;
+}
+
+.form-group textarea {
+  min-height: 160px;
+  padding: 16px 18px;
+  resize: vertical;
+  line-height: 1.65;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #8a8f98;
+}
+
+/* Interações sutis */
+.form-group input:hover,
+.form-group textarea:hover {
+  border-color: rgba(140, 106, 43, 0.28);
+  transform: translateY(-1px);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-accent);
+  background: #fffefc;
+  box-shadow: 0 0 0 4px rgba(140, 106, 43, 0.12);
+}
+
+/* Campo de arquivo */
+.form-group input[type='file'] {
+  padding: 14px 16px;
+  min-height: auto;
+  background: linear-gradient(180deg, #ffffff 0%, #faf8f3 100%);
+  cursor: pointer;
+}
+
+.form-group input[type='file']::file-selector-button {
+  margin-right: 14px;
+  padding: 10px 16px;
+  border: 1px solid rgba(140, 106, 43, 0.18);
+  border-radius: 999px;
+  background: rgba(140, 106, 43, 0.1);
+  color: var(--color-accent);
+  font-weight: var(--fw-semibold);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form-group input[type='file']::file-selector-button:hover {
+  background: rgba(140, 106, 43, 0.16);
+  border-color: rgba(140, 106, 43, 0.26);
+}
+
+/* =========================================================
+   AÇÕES FINAIS
+========================================================= */
+.create-property-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 4px;
+}
+
+/* =========================================================
+   ACESSIBILIDADE
+========================================================= */
+.btn:focus-visible,
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(140, 106, 43, 0.14);
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+@media (max-width: 900px) {
+  .create-property-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .create-property-header .btn {
+    width: 100%;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group-full {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .create-property-page {
+    padding: 14px 12px 28px;
+  }
+
+  .create-property-header,
+  .create-property-card {
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .form-section {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .create-property-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .create-property-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .create-property-actions .btn,
+  .create-property-actions button,
+  .create-property-actions a {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .create-property-card,
+  .form-section,
+  .form-group input,
+  .form-group textarea,
+  .form-group input[type='file']::file-selector-button {
+    transition: none;
+  }
+}

@@ -3,7 +3,7 @@ import Property from "../models/Property.js";
 import uploadToCloudinary from "../utils/uploadToCloudinary.js";
 import deleteFromCloudinary from "../utils/deleteFromCloudinary.js";
 
-// Público (landing): lista só ativos
+// Público (landing): lista 
 export const listPublicProperties = async (req, res, next) => {
   try {
     const items = await Property.find({ isActive: true }).sort({

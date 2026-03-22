@@ -11,76 +11,157 @@
 
   <body class="create-property-page">
     <main class="create-property-container">
+      <!-- Cabeçalho da página -->
       <section class="create-property-header">
-        <div>
+        <div class="header-content">
+          <span class="page-eyebrow">Painel administrativo</span>
           <h1>Cadastrar imóvel</h1>
-          <p>Adicione um novo imóvel ao sistema</p>
+          <p>
+            Preencha os dados abaixo para adicionar um novo imóvel ao sistema.
+          </p>
         </div>
 
-        <a href="./dashboard.html" class="btn btn-secondary">
+        <!-- Link com aparência de botão -->
+        <a href="./dashboard.html" class="btn btn-primary">
           Voltar ao dashboard
         </a>
       </section>
 
+      <!-- Card principal do formulário -->
       <section class="create-property-card">
-        <p id="success-message" class="hidden success-message"></p>
-        <p id="error-message" class="hidden error-message"></p>
+        <p id="success-message" class="hidden success-message" role="status"></p>
+        <p id="error-message" class="hidden error-message" role="alert"></p>
 
         <form id="create-property-form" class="create-property-form">
-          <div class="form-group">
-            <label for="title">Título</label>
-            <input type="text" id="title" name="title" required />
+          <!-- Informações principais -->
+          <div class="form-section">
+            <h2>Informações principais</h2>
+            <p class="form-section-text">
+              Dados básicos para identificação e apresentação do imóvel.
+            </p>
+
+            <div class="form-grid">
+              <div class="form-group form-group-full">
+                <label for="title">Título</label>
+                <input
+                  type="text"
+                  id="title"
+                  name="title"
+                  placeholder="Ex.: Apartamento 3 quartos com vista para o mar"
+                  required
+                />
+              </div>
+
+              <div class="form-group form-group-full">
+                <label for="description">Descrição</label>
+                <textarea
+                  id="description"
+                  name="description"
+                  rows="6"
+                  placeholder="Descreva os principais diferenciais do imóvel, acabamento, localização e benefícios."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="price">Preço</label>
+                <input
+                  type="number"
+                  id="price"
+                  name="price"
+                  placeholder="Ex.: 450000"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="city">Cidade</label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="Ex.: Vila Velha"
+                  required
+                />
+              </div>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="description">Descrição</label>
-            <textarea
-              id="description"
-              name="description"
-              rows="5"
-              required
-            ></textarea>
+          <!-- Localização -->
+          <div class="form-section">
+            <h2>Localização</h2>
+            <p class="form-section-text">
+              Informações de endereço e região do imóvel.
+            </p>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="state">Estado</label>
+                <input
+                  type="text"
+                  id="state"
+                  name="state"
+                  value="ES"
+                  placeholder="Ex.: ES"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="neighborhood">Bairro</label>
+                <input
+                  type="text"
+                  id="neighborhood"
+                  name="neighborhood"
+                  placeholder="Ex.: Praia da Costa"
+                />
+              </div>
+
+              <div class="form-group form-group-full">
+                <label for="address">Endereço</label>
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  placeholder="Ex.: Av. Exemplo, 1200"
+                />
+              </div>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="price">Preço</label>
-            <input type="number" id="price" name="price" required />
+          <!-- Imagens -->
+          <div class="form-section">
+            <h2>Imagens</h2>
+            <p class="form-section-text">
+              Adicione fotos do imóvel para melhorar a apresentação.
+            </p>
+
+            <div class="form-grid">
+              <div class="form-group form-group-full">
+                <label for="images">Selecionar imagens</label>
+                <input
+                  type="file"
+                  id="images"
+                  name="images"
+                  multiple
+                  accept="image/*"
+                />
+                <small class="field-help">
+                  Você pode selecionar mais de uma imagem.
+                </small>
+              </div>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="city">Cidade</label>
-            <input type="text" id="city" name="city" required />
-          </div>
-
-          <div class="form-group">
-            <label for="state">Estado</label>
-            <input type="text" id="state" name="state" value="ES" required />
-          </div>
-
-          <div class="form-group">
-            <label for="neighborhood">Bairro</label>
-            <input type="text" id="neighborhood" name="neighborhood" />
-          </div>
-
-          <div class="form-group">
-            <label for="address">Endereço</label>
-            <input type="text" id="address" name="address" />
-          </div>
-
-          <div class="form-group">
-            <label for="images">Imagens</label>
-            <input
-              type="file"
-              id="images"
-              name="images"
-              multiple
-              accept="image/*"
-            />
-          </div>
-
+          <!-- Ações -->
           <div class="create-property-actions">
-            <button type="submit">Cadastrar imóvel</button>
-            <a href="./dashboard.html" class="btn btn-secondary">Cancelar</a>
+            <button type="submit" class="btn btn-primary">
+              Cadastrar imóvel
+            </button>
+
+            <a href="./dashboard.html" class="btn btn-secondary">
+              Cancelar
+            </a>
           </div>
         </form>
       </section>
