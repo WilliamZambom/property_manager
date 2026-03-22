@@ -5,94 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Editar imóvel</title>
 
-    <link rel="stylesheet" href="../css/admin.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/edit-property.css" />
   </head>
 
   <body class="edit-property-page">
     <main class="edit-property-container">
       <section class="edit-property-header">
-        <div>
-          <h1>Editar imóvel</h1>
-          <p>Atualize os dados do imóvel cadastrado</p>
-        </div>
+        <div class="edit-property-header__content">
+          <span class="page-eyebrow">Painel administrativo</span>
 
-        <a href="./dashboard.html" class="btn btn-secondary">
-          Voltar ao dashboard
-        </a>
+          <div class="edit-property-header__row">
+            <div>
+              <h1>Editar imóvel</h1>
+              <p>Atualize os dados do imóvel cadastrado</p>
+            </div>
+
+            <a href="./dashboard.html" class="btn btn-secondary">
+              Voltar ao dashboard
+            </a>
+          </div>
+        </div>
       </section>
 
       <section class="edit-property-card">
         <p id="loading-message">Carregando imóvel...</p>
-        <p id="error-message" class="hidden"></p>
+        <p id="error-message" class="hidden error-message"></p>
 
         <form id="edit-property-form" class="edit-property-form hidden">
-          <div class="form-group">
-            <label for="title">Título</label>
-            <input type="text" id="title" name="title" required />
+          <div class="form-section">
+            <div class="form-section-heading">
+              <span class="form-section-index">01</span>
+              <div>
+                <h2>Informações principais</h2>
+                <p class="form-section-text">
+                  Ajuste os dados centrais que aparecem no anúncio do imóvel.
+                </p>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group form-group-full">
+                <label for="title">Título</label>
+                <input type="text" id="title" name="title" required />
+              </div>
+
+              <div class="form-group form-group-full">
+                <label for="description">Descrição</label>
+                <textarea
+                  id="description"
+                  name="description"
+                  rows="6"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="price">Preço</label>
+                <input type="number" id="price" name="price" min="0" required />
+              </div>
+
+              <div class="form-group">
+                <label for="city">Cidade</label>
+                <input type="text" id="city" name="city" required />
+              </div>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="description">Descrição</label>
-            <textarea
-              id="description"
-              name="description"
-              rows="5"
-              required
-            ></textarea>
+          <div class="form-section">
+            <div class="form-section-heading">
+              <span class="form-section-index">02</span>
+              <div>
+                <h2>Localização</h2>
+                <p class="form-section-text">
+                  Revise endereço e região para manter o cadastro consistente.
+                </p>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="state">Estado</label>
+                <input type="text" id="state" name="state" maxlength="2" required />
+              </div>
+
+              <div class="form-group">
+                <label for="neighborhood">Bairro</label>
+                <input type="text" id="neighborhood" name="neighborhood" />
+              </div>
+
+              <div class="form-group form-group-full">
+                <label for="address">Endereço</label>
+                <input type="text" id="address" name="address" />
+              </div>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="price">Preço</label>
-            <input type="number" id="price" name="price" required />
-          </div>
+          <div class="form-section">
+            <div class="form-section-heading">
+              <span class="form-section-index">03</span>
+              <div>
+                <h2>Imagens</h2>
+                <p class="form-section-text">
+                  Envie novas fotos e organize a imagem principal quando
+                  necessário.
+                </p>
+              </div>
+            </div>
 
-          <div class="form-group">
-            <label for="city">Cidade</label>
-            <input type="text" id="city" name="city" required />
-          </div>
+            <div class="form-grid">
+              <div class="form-group form-group-full form-group--file">
+                <label for="images">Adicionar novas imagens</label>
+                <input
+                  type="file"
+                  id="images"
+                  name="images"
+                  multiple
+                  accept="image/*"
+                />
+              </div>
 
-          <div class="form-group">
-            <label for="state">Estado</label>
-            <input type="text" id="state" name="state" required />
-          </div>
-
-          <div class="form-group">
-            <label for="neighborhood">Bairro</label>
-            <input type="text" id="neighborhood" name="neighborhood" />
-          </div>
-
-          <div class="form-group">
-            <label for="address">Endereço</label>
-            <input type="text" id="address" name="address" />
-          </div>
-
-          <div class="form-group">
-            <label for="images">Adicionar novas imagens</label>
-            <input
-              type="file"
-              id="images"
-              name="images"
-              multiple
-              accept="image/*"
-            />
-          </div>
-
-          <div class="form-group checkbox-group">
-            <label>
-              <input
-                type="checkbox"
-                id="replaceMainImage"
-                name="replaceMainImage"
-                value="true"
-              />
-              Definir nova imagem enviada como principal
-            </label>
+              <div class="form-group form-group-full checkbox-group">
+                <label for="replaceMainImage" class="checkbox-card">
+                  <input
+                    type="checkbox"
+                    id="replaceMainImage"
+                    name="replaceMainImage"
+                    value="true"
+                  />
+                  <span>Definir nova imagem enviada como principal</span>
+                </label>
+              </div>
+            </div>
           </div>
 
           <section class="current-images-section">
             <div class="current-images-header">
-              <h2>Imagens atuais</h2>
+              <span class="page-eyebrow page-eyebrow--soft">Galeria atual</span>
+              <h2>Imagens cadastradas</h2>
               <p>Você pode remover imagens individualmente abaixo.</p>
             </div>
 
@@ -102,7 +159,7 @@
           </section>
 
           <div class="edit-property-actions">
-            <button type="submit">Salvar alterações</button>
+            <button type="submit" class="btn btn-primary">Salvar alterações</button>
             <a href="./dashboard.html" class="btn btn-secondary">Cancelar</a>
           </div>
         </form>

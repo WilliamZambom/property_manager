@@ -4,42 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detalhes do Imóvel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/property.css" />
   </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <a href="./index.html" class="back-link">← Voltar para imóveis</a>
+  <body class="property-shell">
+    <header class="property-header">
+      <div class="container property-header__content">
+        <a href="./index.html" class="back-link">Voltar para imóveis</a>
+
+        <div class="property-header__copy">
+          <span class="property-eyebrow">Detalhes do imóvel</span>
+          <h1>Apresentação do imóvel</h1>
+          <p>
+            Veja as imagens, localização e descrição. Entre em contato para saber mais ou agendar uma visita.
+          </p>
+        </div>
       </div>
     </header>
 
     <main class="container property-page">
-      <p id="loading">Carregando imóvel...</p>
-      <p id="error-message" class="hidden"></p>
+      <p id="loading" class="feedback-message">Carregando imóvel...</p>
+      <p id="error-message" class="feedback-message feedback-error hidden"></p>
 
-      <section id="property-details" class="hidden">
-        <div class="gallery">
-          <img
-            id="main-image"
-            src="./assets/placeholder.jpg"
-            alt="Imagem do imóvel"
-            class="main-image"
-          />
-          <div id="thumbnail-list" class="thumbnail-list"></div>
+      <section id="property-details" class="property-layout hidden">
+        <div class="property-visuals">
+          <div class="gallery-card">
+            <img
+              id="main-image"
+              src="./assets/placeholder.jpg"
+              alt="Imagem do imóvel"
+              class="main-image"
+            />
+
+            <div id="thumbnail-list" class="thumbnail-list"></div>
+          </div>
         </div>
 
-        <div class="property-info">
-          <h1 id="property-title"></h1>
-          <p id="property-price" class="price"></p>
-          <p id="property-location" class="location"></p>
-          <p id="property-address" class="address"></p>
+        <aside class="property-info">
+          <div class="property-info-card">
+            <span class="property-eyebrow property-eyebrow--soft">
+              Imóvel selecionado
+            </span>
 
-          <section class="description-box">
-            <h2>Descrição</h2>
-            <p id="property-description"></p>
-          </section>
-        </div>
+            <h2 id="property-title"></h2>
+            <p id="property-price" class="price"></p>
+
+            <div class="property-meta">
+              <p id="property-location" class="location"></p>
+              <p id="property-address" class="address"></p>
+            </div>
+
+            <section class="description-box">
+              <h3>Descrição</h3>
+              <p id="property-description"></p>
+            </section>
+          </div>
+        </aside>
       </section>
     </main>
 
