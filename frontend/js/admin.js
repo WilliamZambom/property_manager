@@ -93,7 +93,7 @@ async function loadAdminProperties() {
   if (!token) return;
 
   try {
-    const properties = await fetch(`${API_BASE_URL}/properties`, {
+    const properties = await fetch(`${API_BASE_URL}/api/properties`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -142,7 +142,7 @@ document.addEventListener("click", async (event) => {
   if (!confirmDelete) return;
 
   try {
-    const response = await fetch(`${API_BASE_URL}/properties/${id}`, {
+    const response = await fetch(`${API_BASE_URL}/api/properties/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,

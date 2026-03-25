@@ -31,7 +31,7 @@ form.addEventListener("submit", async (event) => {
   try {
     const formData = new FormData(form);
 
-    const response = await fetch(`${API_BASE_URL}/properties`, {
+    const response = await fetch(`${API_BASE_URL}/api/properties`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,

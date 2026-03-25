@@ -7,7 +7,24 @@ import uploadRoutes from "./routes/uploadRoutes.js";
 
 const app = express();
 
-app.use(cors());
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  "https://property-manager-99bxlr3al-williams-projects-b7eada5c.vercel.app",
+  "http://localhost:5500",
+].filter(Boolean);
+
+app.use(
+  cors({
+    origin(origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(new Error("Origem não permitida pelo CORS"));
+    },
+    credentials: true,
+  }),
+);
 app.use(express.json());
 
 app.get("/", (req, res) => {

@@ -62,7 +62,7 @@ async function loadProperty() {
   }
 
   try {
-    const response = await fetch(`${API_BASE_URL}/properties`, {
+    const response = await fetch(`${API_BASE_URL}/api/properties`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -111,7 +111,7 @@ form.addEventListener("submit", async (event) => {
   try {
     const formData = new FormData(form);
 
-    const response = await fetch(`${API_BASE_URL}/properties/${propertyId}`, {
+    const response = await fetch(`${API_BASE_URL}/api/properties/${propertyId}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -148,7 +148,7 @@ document.addEventListener("click", async (event) => {
     const encodedPublicId = encodeURIComponent(publicId);
 
     const response = await fetch(
-      `${API_BASE_URL}/properties/${propertyId}/images/${encodedPublicId}`,
+      `${API_BASE_URL}/api/properties/${propertyId}/images/${encodedPublicId}`,
       {
         method: "DELETE",
         headers: {
