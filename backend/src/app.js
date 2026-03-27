@@ -9,7 +9,7 @@ const app = express();
 
 const allowedOrigins = [
   process.env.FRONTEND_URL,
-  "https://property-manager-99bxlr3al-williams-projects-b7eada5c.vercel.app",
+  "https://welitonalvesimoveis.vercel.app/",
   "http://localhost:5500",
 ].filter(Boolean);
 

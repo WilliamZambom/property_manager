@@ -226,6 +226,14 @@
   object-fit: cover;
 }
 
+cite.institutional-author {
+  display: block;
+  margin-top: var(--space-4);
+  text-align: right;
+  color: var(--color-text);
+  font-size: var(--fs-sm);
+}
+
 .services-section,
 .partners-section {
   position: relative;
