@@ -67,12 +67,32 @@
               <p id="property-description"></p>
             </section>
           </div>
+
+          <section id="property-video-card" class="property-video-card hidden">
+            <span class="property-eyebrow property-eyebrow--soft">
+              Mídia complementar
+            </span>
+            <h3>Vídeo do imóvel</h3>
+
+            <div class="property-video-frame">
+              <iframe
+                id="property-video-iframe"
+                title="Vídeo do imóvel"
+                src=""
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </section>
         </aside>
       </section>
     </main>
 
     <script src="./js/config.js"></script>
     <script src="./js/api.js"></script>
+    <script src="./js/youtube-utils.js"></script>
     <script src="./js/property.js"></script>
   </body>
 </html>

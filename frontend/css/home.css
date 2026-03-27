@@ -29,10 +29,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-6);
+  gap: var(--space-8);
   margin-bottom: var(--space-16);
 
-  padding: 12px 18px;
+  padding: 12px 22px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(10px);
@@ -43,7 +43,14 @@
 .main-nav {
   display: flex;
   align-items: center;
-  gap: var(--space-6);
+  justify-content: center;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  gap: var(--space-4) clamp(var(--space-6), 4vw, var(--space-10));
+}
+
+.hero-topbar > .btn-secondary {
+  flex-shrink: 0;
 }
 
 .main-nav a {
@@ -467,6 +474,7 @@ cite.institutional-author {
   }
 
   .hero-topbar {
+    gap: var(--space-6);
     margin-bottom: var(--space-12);
   }
 
@@ -515,8 +523,22 @@ cite.institutional-author {
   .hero-topbar {
     min-height: auto;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: var(--space-4);
     margin-bottom: var(--space-10);
+    padding: 14px 16px;
+    border-radius: 24px;
+  }
+
+  .brand,
+  .main-nav,
+  .hero-topbar > .btn-secondary {
+    width: 100%;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+    gap: var(--space-3) var(--space-5);
   }
 
   .brand__logo-box {

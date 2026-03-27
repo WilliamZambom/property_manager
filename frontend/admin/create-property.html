@@ -118,6 +118,20 @@
                     required
                   />
                 </div>
+
+                <div class="form-group form-group-full">
+                  <label for="videoUrl">Link do vídeo do imóvel</label>
+                  <input
+                    type="url"
+                    id="videoUrl"
+                    name="videoUrl"
+                    placeholder="Ex.: https://www.youtube.com/watch?v=XXXXXXXXXXX"
+                    inputmode="url"
+                  />
+                  <small class="field-help">
+                    Campo opcional. Informe apenas a URL do vídeo, preferencialmente do YouTube.
+                  </small>
+                </div>
               </div>
             </div>
 
@@ -217,6 +231,7 @@
     </main>
 
     <script src="../js/config.js"></script>
+    <script src="../js/youtube-utils.js"></script>
     <script src="../js/create-property.js"></script>
   </body>
 </html>

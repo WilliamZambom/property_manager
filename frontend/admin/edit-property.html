@@ -76,6 +76,17 @@
                 <label for="city">Cidade</label>
                 <input type="text" id="city" name="city" required />
               </div>
+
+              <div class="form-group form-group-full">
+                <label for="videoUrl">Link do vídeo do imóvel</label>
+                <input
+                  type="url"
+                  id="videoUrl"
+                  name="videoUrl"
+                  placeholder="Ex.: https://www.youtube.com/watch?v=XXXXXXXXXXX"
+                  inputmode="url"
+                />
+              </div>
             </div>
           </div>
 
@@ -167,6 +178,7 @@
     </main>
 
     <script src="../js/config.js"></script>
+    <script src="../js/youtube-utils.js"></script>
     <script src="../js/edit-property.js"></script>
   </body>
 </html>

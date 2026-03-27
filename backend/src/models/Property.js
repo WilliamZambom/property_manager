@@ -17,6 +17,7 @@ const propertySchema = new mongoose.Schema(
     state: { type: String, required: true, trim: true },
     neighborhood: { type: String, trim: true },
     address: { type: String, trim: true },
+    videoUrl: { type: String, trim: true, default: "" },
 
     images: {
       type: [imageSchema],

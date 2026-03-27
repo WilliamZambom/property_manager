@@ -1,3 +1,4 @@
+/* Editado: renderiza o card de vídeo do imóvel apenas quando houver link válido do YouTube e converte a URL para embed responsivo. */
 const loading = document.getElementById("loading");
 const errorMessage = document.getElementById("error-message");
 const propertyDetails = document.getElementById("property-details");
@@ -10,6 +11,8 @@ const propertyPrice = document.getElementById("property-price");
 const propertyLocation = document.getElementById("property-location");
 const propertyAddress = document.getElementById("property-address");
 const propertyDescription = document.getElementById("property-description");
+const propertyVideoCard = document.getElementById("property-video-card");
+const propertyVideoIframe = document.getElementById("property-video-iframe");
 
 function formatPrice(value) {
   return new Intl.NumberFormat("pt-BR", {
@@ -45,6 +48,19 @@ function renderImages(images) {
   });
 }
 
+function renderPropertyVideo(videoUrl) {
+  const embedUrl = window.propertyVideoUtils?.getYouTubeEmbedUrl(videoUrl);
+
+  if (!embedUrl) {
+    propertyVideoIframe.src = "";
+    propertyVideoCard.classList.add("hidden");
+    return;
+  }
+
+  propertyVideoIframe.src = embedUrl;
+  propertyVideoCard.classList.remove("hidden");
+}
+
 function renderProperty(property) {
   propertyTitle.textContent = property.title || "Imóvel";
   propertyPrice.textContent = formatPrice(property.price || 0);
@@ -56,6 +72,7 @@ function renderProperty(property) {
     property.description || "Sem descrição disponível.";
 
   renderImages(property.images);
+  renderPropertyVideo(property.videoUrl);
 
   loading.classList.add("hidden");
   propertyDetails.classList.remove("hidden");

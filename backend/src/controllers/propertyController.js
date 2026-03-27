@@ -59,6 +59,7 @@ export const createProperty = async (req, res, next) => {
       state,
       neighborhood,
       address,
+      videoUrl,
       isActive,
     } = req.body || {};
 
@@ -116,6 +117,7 @@ export const createProperty = async (req, res, next) => {
       state: state.trim().toUpperCase(),
       neighborhood: neighborhood?.trim() || "",
       address: address?.trim() || "",
+      videoUrl: videoUrl?.trim() || "",
       images: uploadedImages,
       isActive:
         isActive !== undefined
@@ -149,6 +151,7 @@ export const updateProperty = async (req, res, next) => {
       state,
       neighborhood,
       address,
+      videoUrl,
       isActive,
       replaceMainImage,
     } = req.body || {};
@@ -205,6 +208,10 @@ export const updateProperty = async (req, res, next) => {
 
     if (address !== undefined) {
       property.address = address.trim();
+    }
+
+    if (videoUrl !== undefined) {
+      property.videoUrl = videoUrl.trim();
     }
 
     if (isActive !== undefined) {

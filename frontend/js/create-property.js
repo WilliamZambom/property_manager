@@ -1,6 +1,8 @@
+/* Editado: valida e envia o link opcional de vídeo do imóvel junto com o FormData de cadastro. */
 const form = document.getElementById("create-property-form");
 const successMessage = document.getElementById("success-message");
 const errorMessage = document.getElementById("error-message");
+const videoUrlInput = document.getElementById("videoUrl");
 
 function getToken() {
   return localStorage.getItem("token");
@@ -29,7 +31,21 @@ form.addEventListener("submit", async (event) => {
   errorMessage.textContent = "";
 
   try {
+    const normalizedVideoUrl = window.propertyVideoUtils?.normalizeVideoUrl(
+      videoUrlInput?.value,
+    ) || "";
+
+    if (
+      normalizedVideoUrl &&
+      !window.propertyVideoUtils?.isValidYouTubeUrl(normalizedVideoUrl)
+    ) {
+      throw new Error(
+        "Informe um link v\u00e1lido do YouTube para o v\u00eddeo do im\u00f3vel.",
+      );
+    }
+
     const formData = new FormData(form);
+    formData.set("videoUrl", normalizedVideoUrl);
 
     const response = await fetch(`${API_BASE_URL}/api/properties`, {
       method: "POST",

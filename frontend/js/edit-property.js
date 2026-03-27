@@ -1,7 +1,9 @@
+/* Editado: carrega, valida e envia o link opcional de vídeo do imóvel no fluxo de edição. */
 const loadingMessage = document.getElementById("loading-message");
 const errorMessage = document.getElementById("error-message");
 const form = document.getElementById("edit-property-form");
 const currentImagesList = document.getElementById("current-images-list");
+const videoUrlInput = document.getElementById("videoUrl");
 
 function getToken() {
   return localStorage.getItem("token");
@@ -88,6 +90,7 @@ async function loadProperty() {
     document.getElementById("state").value = property.state || "";
     document.getElementById("neighborhood").value = property.neighborhood || "";
     document.getElementById("address").value = property.address || "";
+    videoUrlInput.value = property.videoUrl || "";
 
     renderCurrentImages(property.images || [], property._id);
 
@@ -109,7 +112,21 @@ form.addEventListener("submit", async (event) => {
   if (!token || !propertyId) return;
 
   try {
+    const normalizedVideoUrl = window.propertyVideoUtils?.normalizeVideoUrl(
+      videoUrlInput?.value,
+    ) || "";
+
+    if (
+      normalizedVideoUrl &&
+      !window.propertyVideoUtils?.isValidYouTubeUrl(normalizedVideoUrl)
+    ) {
+      throw new Error(
+        "Informe um link v\u00e1lido do YouTube para o v\u00eddeo do im\u00f3vel.",
+      );
+    }
+
     const formData = new FormData(form);
+    formData.set("videoUrl", normalizedVideoUrl);
 
     const response = await fetch(`${API_BASE_URL}/api/properties/${propertyId}`, {
       method: "PUT",
