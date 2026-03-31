@@ -7,17 +7,21 @@
     radial-gradient(circle at left center, rgba(var(--color-primary-rgb), 0.1), transparent 26%),
     linear-gradient(180deg, rgba(var(--color-white-rgb), 0.98) 0%, #e7eef3 100%);
   border-bottom: 1px solid var(--color-border);
-}
-
-.hero {
   background-image:
-    linear-gradient(135deg, rgba(var(--color-primary-dark-rgb), 0.32), rgba(var(--color-primary-rgb), 0.7)),
+    linear-gradient(135deg, rgba(var(--color-primary-dark-rgb), 0.45), rgba(var(--color-primary-rgb), 0.75)),
     url('../assets/background_image.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
+p.hero-description{
+  color: var(--color-text-softw);
+  font-size: var(--fs-md);
+}
+span.section-tag{
+  color: var(--color-yellow);
+}
 .hero::after {
   content: '';
   position: absolute;
@@ -47,7 +51,7 @@
   background: rgba(var(--color-white-rgb), 0.8);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(var(--color-primary-rgb), 0.1);
-  box-shadow: 0 14px 32px rgba(var(--color-primary-dark-rgb), 0.08);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .main-nav {
@@ -102,11 +106,11 @@
   flex-shrink: 0;
   border-radius: 18px;
   border: 1px solid rgba(var(--color-primary-rgb), 0.12);
-  background: linear-gradient(180deg, rgba(var(--color-white-rgb), 1), rgba(var(--color-primary-rgb), 0.08));
+  background: linear-gradient(180deg, rgba(var(--color-white-rgb), 1));
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
   overflow: hidden;
 }
 
@@ -182,7 +186,7 @@
   background: linear-gradient(180deg, var(--color-white) 0%, var(--color-surface-2) 100%);
   border-top-left-radius: 28px;
   border-top-right-radius: 28px;
-  box-shadow: 0 -12px 32px rgba(var(--color-primary-dark-rgb), 0.05);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .institutional-section {
@@ -210,7 +214,7 @@
   background: linear-gradient(180deg, rgba(var(--color-white-rgb), 0.98), rgba(var(--color-primary-rgb), 0.05));
   border: 1px solid var(--color-border);
   border-radius: 26px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .institutional-card p {
@@ -235,7 +239,7 @@
   border-radius: 28px;
   border: 1px solid var(--color-border);
   background: linear-gradient(180deg, rgba(var(--color-white-rgb), 0.98), rgba(var(--color-primary-rgb), 0.04));
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .institutional-image {
@@ -274,7 +278,7 @@ cite.institutional-author {
   background: linear-gradient(180deg, rgba(var(--color-white-rgb), 0.98), rgba(var(--color-primary-rgb), 0.05));
   border: 1px solid var(--color-border);
   border-radius: 22px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
   transition:
     transform var(--transition-normal),
     box-shadow var(--transition-normal),
@@ -284,7 +288,7 @@ cite.institutional-author {
 .service-card:hover,
 .partner-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
   border-color: rgba(var(--color-yellow-rgb), 0.34);
 }
 
@@ -333,7 +337,7 @@ cite.institutional-author {
   border: 1px solid var(--color-border);
   border-radius: 22px;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
   transition:
     transform var(--transition-normal),
     box-shadow var(--transition-normal),
@@ -342,7 +346,7 @@ cite.institutional-author {
 
 .property-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
   border-color: rgba(var(--color-yellow-rgb), 0.36);
 }
 
@@ -399,14 +403,14 @@ cite.institutional-author {
     border-color var(--transition-normal),
     transform var(--transition-fast),
     box-shadow var(--transition-normal);
-  box-shadow: 0 14px 28px rgba(var(--color-primary-dark-rgb), 0.16);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .details-button:hover {
   background: linear-gradient(135deg, var(--color-action-hover), #041931);
   border-color: var(--color-action-hover);
   transform: translateY(-1px);
-  box-shadow: 0 18px 32px rgba(var(--color-primary-dark-rgb), 0.2);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .feedback-message {
@@ -622,3 +626,4 @@ cite.institutional-author {
     grid-template-columns: 1fr;
   }
 }
+

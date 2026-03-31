@@ -27,9 +27,7 @@
     linear-gradient(135deg, rgba(var(--color-white-rgb), 0.98), rgba(var(--color-primary-rgb), 0.05));
   border: 1px solid rgba(var(--color-primary-rgb), 0.1);
   border-radius: 32px;
-  box-shadow:
-    0 28px 60px rgba(var(--color-primary-dark-rgb), 0.12),
-    0 10px 24px rgba(var(--color-primary-dark-rgb), 0.06);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .edit-property-header::before,
@@ -125,27 +123,25 @@
 .btn-primary {
   background: linear-gradient(135deg, var(--color-action), var(--color-action-hover));
   color: var(--color-white);
-  box-shadow:
-    0 16px 30px rgba(var(--color-primary-dark-rgb), 0.2),
-    inset 0 1px 0 rgba(var(--color-white-rgb), 0.18);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .btn-primary:hover {
   background: linear-gradient(135deg, var(--color-action-hover), #041931);
-  box-shadow: 0 18px 34px rgba(var(--color-primary-dark-rgb), 0.24);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .btn-secondary {
   background: rgba(var(--color-white-rgb), 0.82);
   color: var(--color-text);
   border-color: rgba(var(--color-primary-rgb), 0.12);
-  box-shadow: 0 8px 22px rgba(var(--color-primary-dark-rgb), 0.06);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .btn-secondary:hover {
   border-color: rgba(var(--color-yellow-rgb), 0.4);
   color: var(--color-action);
-  box-shadow: 0 12px 26px rgba(var(--color-primary-dark-rgb), 0.08);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .edit-property-card {
@@ -154,9 +150,7 @@
     linear-gradient(180deg, rgba(var(--color-white-rgb), 0.98), rgba(var(--color-primary-rgb), 0.05));
   border: 1px solid rgba(var(--color-primary-rgb), 0.1);
   border-radius: 32px;
-  box-shadow:
-    0 26px 54px rgba(var(--color-primary-dark-rgb), 0.1),
-    0 10px 24px rgba(var(--color-primary-dark-rgb), 0.05);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .edit-property-card::before {
@@ -220,7 +214,7 @@
 .current-images-section:hover {
   transform: translateY(-2px);
   border-color: rgba(var(--color-yellow-rgb), 0.28);
-  box-shadow: 0 14px 28px rgba(var(--color-primary-dark-rgb), 0.06);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .form-section-heading {
@@ -298,7 +292,7 @@
     box-shadow 0.2s ease,
     transform 0.2s ease,
     background 0.2s ease;
-  box-shadow: inset 0 1px 0 rgba(var(--color-white-rgb), 0.75);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .form-group input {
@@ -327,9 +321,7 @@
 .form-group textarea:focus {
   border-color: var(--color-action);
   background: rgba(var(--color-white-rgb), 0.98);
-  box-shadow:
-    0 0 0 4px rgba(var(--color-primary-rgb), 0.12),
-    0 10px 24px rgba(var(--color-primary-dark-rgb), 0.08);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .form-group--file input[type='file'] {
@@ -420,7 +412,7 @@
   border: 1px solid rgba(var(--color-primary-rgb), 0.1);
   background:
     linear-gradient(180deg, rgba(var(--color-white-rgb), 0.98), rgba(var(--color-primary-rgb), 0.05));
-  box-shadow: 0 12px 24px rgba(var(--color-primary-dark-rgb), 0.05);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .current-image-card img {
@@ -463,7 +455,7 @@
   background: var(--color-danger);
   color: var(--color-white);
   border-color: var(--color-danger);
-  box-shadow: 0 12px 24px rgba(var(--color-danger-rgb), 0.18);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .edit-property-actions {
@@ -477,7 +469,7 @@
 .form-group textarea:focus-visible,
 .current-image-card button:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 4px rgba(var(--color-primary-rgb), 0.14);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 @media (max-width: 720px) {
@@ -534,3 +526,4 @@
     transition: none;
   }
 }
+

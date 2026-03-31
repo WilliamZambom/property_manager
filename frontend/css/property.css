@@ -24,9 +24,7 @@
     linear-gradient(135deg, rgba(var(--color-white-rgb), 0.98), rgba(var(--color-primary-rgb), 0.05));
   border: 1px solid rgba(var(--color-primary-rgb), 0.1);
   border-radius: 32px;
-  box-shadow:
-    0 28px 60px rgba(var(--color-primary-dark-rgb), 0.12),
-    0 10px 24px rgba(var(--color-primary-dark-rgb), 0.06);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .property-header__content::before,
@@ -65,7 +63,7 @@
   font-size: 0.96rem;
   font-weight: var(--fw-semibold);
   text-decoration: none;
-  box-shadow: 0 8px 22px rgba(var(--color-primary-dark-rgb), 0.06);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
   transition:
     transform 0.2s ease,
     box-shadow 0.25s ease,
@@ -82,7 +80,7 @@
   transform: translateY(-2px);
   border-color: rgba(var(--color-yellow-rgb), 0.4);
   color: var(--color-action);
-  box-shadow: 0 12px 26px rgba(var(--color-primary-dark-rgb), 0.08);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .property-header__copy {
@@ -171,9 +169,7 @@
     linear-gradient(180deg, rgba(var(--color-white-rgb), 0.98), rgba(var(--color-primary-rgb), 0.05));
   border: 1px solid rgba(var(--color-primary-rgb), 0.1);
   border-radius: 32px;
-  box-shadow:
-    0 26px 54px rgba(var(--color-primary-dark-rgb), 0.1),
-    0 10px 24px rgba(var(--color-primary-dark-rgb), 0.05);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .gallery-card::before {
@@ -189,7 +185,7 @@
   border-radius: 24px;
   display: block;
   background: rgba(var(--color-primary-rgb), 0.06);
-  box-shadow: 0 18px 34px rgba(var(--color-primary-dark-rgb), 0.08);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .thumbnail-list {
@@ -210,7 +206,7 @@
   cursor: pointer;
   border: 1px solid rgba(var(--color-primary-rgb), 0.1);
   background: rgba(var(--color-primary-rgb), 0.05);
-  box-shadow: 0 10px 18px rgba(var(--color-primary-dark-rgb), 0.06);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
   transition:
     transform 0.2s ease,
     box-shadow 0.25s ease,
@@ -220,7 +216,7 @@
 .thumbnail-list img:hover {
   transform: translateY(-2px);
   border-color: rgba(var(--color-yellow-rgb), 0.32);
-  box-shadow: 0 14px 24px rgba(var(--color-primary-dark-rgb), 0.1);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .property-info-card {
@@ -230,9 +226,7 @@
     linear-gradient(180deg, rgba(var(--color-white-rgb), 0.98), rgba(var(--color-primary-rgb), 0.05));
   border: 1px solid rgba(var(--color-primary-rgb), 0.1);
   border-radius: 32px;
-  box-shadow:
-    0 26px 54px rgba(var(--color-primary-dark-rgb), 0.1),
-    0 10px 24px rgba(var(--color-primary-dark-rgb), 0.05);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .property-info-card::before {
@@ -283,7 +277,7 @@
   border: 1px solid rgba(var(--color-primary-rgb), 0.08);
   background:
     linear-gradient(180deg, rgba(var(--color-white-rgb), 0.95), rgba(var(--color-primary-rgb), 0.04));
-  box-shadow: 0 14px 28px rgba(var(--color-primary-dark-rgb), 0.05);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .description-box h3 {
@@ -307,9 +301,7 @@
     linear-gradient(180deg, rgba(var(--color-white-rgb), 0.98), rgba(var(--color-primary-rgb), 0.05));
   border: 1px solid rgba(var(--color-primary-rgb), 0.1);
   border-radius: 32px;
-  box-shadow:
-    0 26px 54px rgba(var(--color-primary-dark-rgb), 0.1),
-    0 10px 24px rgba(var(--color-primary-dark-rgb), 0.05);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .property-video-card::before {
@@ -343,7 +335,7 @@
   border: 1px solid rgba(var(--color-primary-rgb), 0.08);
   background:
     linear-gradient(180deg, rgba(var(--color-white-rgb), 0.95), rgba(var(--color-primary-rgb), 0.04));
-  box-shadow: 0 14px 28px rgba(var(--color-primary-dark-rgb), 0.05);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 .property-video-frame iframe {
@@ -357,7 +349,7 @@
 .back-link:focus-visible,
 .thumbnail-list img:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 4px rgba(var(--color-primary-rgb), 0.14);
+  box-shadow: 0 4px 12px rgba(16, 16, 16, 0.06);
 }
 
 @media (max-width: 720px) {
@@ -425,3 +417,4 @@
     transition: none;
   }
 }
+
