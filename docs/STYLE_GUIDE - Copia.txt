@@ -12,8 +12,8 @@ Classe média interessada na compra de imóveis em Vila Velha.
 
 ### Cores
 
-- Preto (principal)
-- Branco (base)
+- Preto e Branco (Base)
+- Azul 
 - Cinza claro (apoio)
 
 ### Tipografia

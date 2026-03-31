@@ -9,7 +9,6 @@ const signToken = (adminId) => {
 };
 
 // 3.1 Registrar (cria admin + devolve token)
-// Obs: Depois tenho que restringir para não permitir criar vários admins.
 
 export const registerAdmin = async (req, res) => {
   const { name, email, password } = req.body;
