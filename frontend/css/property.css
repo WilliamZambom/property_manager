@@ -2,8 +2,7 @@
   min-height: 100vh;
   background:
     radial-gradient(circle at top left, rgba(var(--color-yellow-rgb), 0.18), transparent 28%),
-    radial-gradient(circle at 84% 16%, rgba(var(--color-primary-rgb), 0.09), transparent 22%),
-    linear-gradient(180deg, rgba(var(--color-white-rgb), 1) 0%, #e7eef3 52%, #dde7ef 100%);
+    radial-gradient(circle at 84% 16%, rgba(var(--color-primary-rgb), 0.09), transparent 22%);
   color: var(--color-text);
 }
 
