@@ -8,18 +8,20 @@
     linear-gradient(180deg, rgba(var(--color-white-rgb), 0.98) 0%, #e7eef3 100%);
   border-bottom: 1px solid var(--color-border);
   background-image:
-    linear-gradient(135deg, rgba(var(--color-primary-dark-rgb), 0.45), rgba(var(--color-primary-rgb), 0.75)),
-    url('../assets/background_image.png');
+    linear-gradient(135deg, rgba(var(--color-primary-dark-rgb), 0.6), rgba(var(--color-primary-rgb), 0.65)),
+    url('../assets/background_imagetest.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 p.hero-description{
-  color: var(--color-text-softw);
+  color: var(--color-white);
+  font-weight: var(--fw-medium);
   font-size: var(--fs-md);
 }
 span.section-tag{
+  font-size: var(--fw-bold);
   color: var(--color-yellow);
 }
 .hero::after {
