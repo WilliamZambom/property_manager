@@ -1,11 +1,11 @@
 /* ========= ROOT  ========= */
 :root {
   /* Brand / Base */
-  --color-white: #f2f2f2;
+  --color-white: #f2f2f2d7;
   --color-graphite: #101010;
-  --color-primary: #03223f;
-  --color-primary-dark: #010d23;
-  --color-yellow: #fccb6f;
+  --color-primary: #376eb1d3;
+  --color-primary-dark: #1e4977;
+  --color-yellow: #dda337fa;
   --color-orange: #e19f41;
 
   --color-white-rgb: 242, 242, 242;
@@ -22,9 +22,9 @@
   --color-surface-2: #eef3f6;
 
   --color-text: var(--color-graphite);
-  --color-text-soft: #18324a;
+  --color-text-soft: #344364;
   --color-text-softw: rgba(var(--color-white-rgb), 0.75);
-  --color-text-muted: #58687a;
+  --color-text-muted: #4b5e72;
 
   --color-border: rgba(var(--color-primary-rgb), 0.14);
   --color-border-strong: rgba(var(--color-primary-rgb), 0.24);
