@@ -95,7 +95,7 @@
   padding: 8px 14px;
   border-radius: 999px;
   background: rgba(var(--color-yellow-rgb), 0.18);
-  color: var(--color-primary);
+  color: var(--color-graphite);
   font-size: 0.78rem;
   font-weight: var(--fw-bold);
   letter-spacing: 0.12em;
@@ -114,7 +114,7 @@
   line-height: 0.98;
   letter-spacing: -0.05em;
   font-weight: var(--fw-extrabold);
-  color: var(--color-primary-dark);
+  color: var(--color-graphite);
 }
 
 .property-header p {
